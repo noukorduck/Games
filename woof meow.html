@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cat and Dog Game</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    img {
+      width: 200px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="cat" src="cat.png">
+    <img id="dog" src="dog.png">
+  </div>
+  
+  <script>
+    const catImage = document.getElementById("cat");
+    const dogImage = document.getElementById("dog");
+  
+    function playSound(soundFile) {
+      const audio = new Audio(soundFile);
+      audio.play();
+    }
+  
+    catImage.addEventListener("click", function() {
+      playSound("meow.wav");
+    });
+  
+    dogImage.addEventListener("click", function() {
+      playSound("woof.wav");
+    });
+  </script>
+</body>
+</html>
